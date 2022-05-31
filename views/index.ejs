@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hobby</title>
+  </head>
+  <body>
+<%- include("layout/header") %>
+    <main>
+      <form action="/" method="post">
+        <input
+          type="text"
+          placeholder="Football"
+          name="hobby" autofocus
+        />
+        <button type="submit">Add</button>
+      </form>
+      <ul class="list">
+        <% if(Hobbies.length >0 ){ %> 
+            <% for(let x=0; x<Hobbies.length; x++){%>
+              <li><%= Hobbies[x].charAt(0).toUpperCase() + Hobbies[x].slice(1)%></li>
+            <% }%>
+        <% }else{ %>
+        <p>No Data Found</p>
+        <% } %>
+      </ul>
+    </main>
+    <%- include("layout/footer") %>
+  </body>
+</html>
