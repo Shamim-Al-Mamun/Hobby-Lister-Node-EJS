@@ -67,10 +67,12 @@ main button:hover {
   padding-bottom: 5px;
 }
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 span {
   font-weight: bold;
+  font-size: 1.1rem;
 }
 footer {
   color: gray;
